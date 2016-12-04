@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="org.eightfoldpath.quiz.MainActivity">
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:text="@string/question_beach_or_mountains" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_beach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/beach" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mountains" />
+        </RadioGroup>
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:text="@string/question_activity_level" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/activity_high"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_high" />
+
+            <RadioButton
+                android:id="@+id/activity_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_medium" />
+
+            <RadioButton
+                android:id="@+id/activity_low"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_low" />
+        </RadioGroup>
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:text="@string/question_budget" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/text_budget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/budget" />
+
+            <TextView
+                android:id="@+id/text_luxury"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/luxury" />
+
+            <SeekBar
+                android:id="@+id/budget"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/text_luxury"
+                android:layout_toRightOf="@id/text_budget"
+                android:max="10" />
+
+        </RelativeLayout>
+
+        <TextView
+            style="@style/QuestionStyle"
+            android:text="@string/question_food" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_food_included_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yes" />
+
+            <RadioButton
+                android:id="@+id/radio_food_included_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no" />
+
+        </RadioGroup>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:onClick="scoreQuiz"
+            android:text="@string/where_should_i_go" />
+
+        <TextView
+            android:id="@+id/quiz_result"
+            style="@style/ResultStyle" />
+
+        <ImageView
+            android:id="@+id/image_result"
+            android:layout_width="match_parent"
+            android:layout_height="240dp" />
+
+    </LinearLayout>
+
+</ScrollView>
